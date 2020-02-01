@@ -1,7 +1,7 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 
-const ScreenContainerView = ({children}) => <SafeAreaView style={styles.container}>{children}</SafeAreaView>;
+const ScreenContainerView = ({children}) => <View style={styles.container}>{children}</View>;
 
 const styles = StyleSheet.create({
 	container: {

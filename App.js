@@ -7,7 +7,9 @@
 import React from 'react';
 import {createAppContainer} from 'react-navigation';
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
-
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/es/integration/react';
+import {store, persistor} from './src/redux/store/store';
 import ExpensesScreen from './src/screens/ExpensesScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -50,4 +52,10 @@ const mainNavigation = createMaterialBottomTabNavigator(
 
 const App = createAppContainer(mainNavigation);
 
-export default App;
+export default () => (
+	<Provider store={store}>
+		<PersistGate loading={null} persistor={persistor}>
+			<App />
+		</PersistGate>
+	</Provider>
+);
