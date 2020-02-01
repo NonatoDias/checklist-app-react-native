@@ -25,7 +25,7 @@ const mainNavigation = createMaterialBottomTabNavigator(
 			}),
 		},
 		ToDoList: {
-			screen:ToDoListScreen,
+			screen: ToDoListScreen,
 			navigationOptions: () => ({
 				tabBarIcon: ({focused}) => (
 					<Icon name="format-list-bulleted" size={20} color={focused ? '#fff' : '#ddd'} />

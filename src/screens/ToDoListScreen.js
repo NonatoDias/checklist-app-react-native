@@ -3,7 +3,7 @@ import {StyleSheet, View, Text} from 'react-native';
 
 const ToDoListScreen = () => (
 	<View style={styles.ToDoListScreen}>
-		<Text>ToDoListScreen</Text>
+		<Text>under construction</Text>
 	</View>
 );
 
